@@ -1,0 +1,28 @@
+i.icon-red {
+    color: red;
+}
+
+body {
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background:white;
+  }
+
+main {
+    flex: 1 0 auto;
+  }
+
+.per{
+    font-size: 40px;
+}
+
+.pert{
+    font-size: 20px;
+}
+
+.cardd {
+   width:125px;
+   height:170px;
+   }

@@ -1,0 +1,33 @@
+      {% extends 'blog/base.html' %}
+       {% block content %}
+
+      {% for post in posts %}
+
+      <div class="col l3">
+
+        <div class="card small hoverable">
+          <div class="card-image">
+            <img src="https://scontent.ftgu2-1.fna.fbcdn.net/v/t1.0-9/1426700_691146237575662_1830436459_n.jpg?oh=391118b29b960e6e8f5e788ff2dc3a28&oe=5A6721D0">
+            <span class="card-title">{{post.title}}</span>
+          </div>
+          <div class="card-content">
+              <div>
+                  <img src="https://scontent.ftgu2-1.fna.fbcdn.net/v/t1.0-1/p160x160/16508230_1428114313878847_289590250725205818_n.jpg?oh=f4d359aa649614aecb1199e8525e95a4&oe=5A613B5C" style="float:left;" alt=""height="40" width="40" class="circle responsive-img">
+                  <p>&nbsp;&nbsp;Autor: Victor S. <br>
+                    {{ post.published_date}}
+                   </p>
+                </div>
+           
+          </div>
+          <div class="card-action">
+            <a href="{% url 'post_detail' pk=post.pk %}">Read Article</a>
+          </div>
+        </div>
+
+      </div>
+
+
+      {% endfor %}
+      {% endblock %}
+
+
